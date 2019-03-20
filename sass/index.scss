@@ -1,0 +1,112 @@
+@import "default";
+
+$primary-color: tomato;
+$primary-font: sans-serif, "cursive";
+body {
+  background: $primary-color;
+  font-family: $primary-font;
+}
+
+// Nesting
+.container {
+  width: 100%;
+  height: 100%;
+  nav {
+    ul {
+      li {
+        &:nth-child(1) {
+          font-size: 1em;
+        }
+        &:nth-child(2) {
+          font-size: 2em;
+        }
+      }
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+// Partials
+
+// _partial.scss
+// @import
+
+// mixins
+
+@mixin transform_Me($prop1, $prop2) {
+  width: $prop1;
+  height: $prop2;
+  background-color: yellow;
+  -ms-transform: rotate(20deg) scale(1.5); /* IE 9 */
+  -webkit-transform: rotate(20deg) scale(1.5); /* Safari 3-8 */
+  transform: rotate(20deg) scale(1.5);
+}
+
+.transform {
+  @include transform_Me(400px, 500px);
+  font-size: 3em;
+}
+
+.transform-2 {
+  @include transform_Me(200px, 300px);
+}
+
+// extend
+%extend-border {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+  font-size: 1em;
+}
+
+%extend-new {
+  margin: 20px;
+  color: #eee;
+}
+
+.border {
+  @extend %extend-border;
+}
+
+.border1 {
+  @extend %extend-border;
+  margin: 20px;
+}
+
+// pseudo selector
+.element {
+  a {
+    text-decoration: none;
+    color: black;
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.header {
+  /* addition */
+  font-size: 4px + 2;
+
+  /* subtraction */
+  height: 80% - 5%;
+}
+
+/* multi */
+.multi {
+  width: 20% * 5;
+
+  /* division */
+  height: (24px / 4);
+}
+
+p {
+  &:before {
+    content: "I am a string with " + quate;
+    font-family: cursive + "serif";
+  }
+}
+
+// DRY

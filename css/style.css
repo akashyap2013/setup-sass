@@ -1,0 +1,89 @@
+html,
+body,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: tomato;
+  font-family: sans-serif, "cursive";
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+.container nav ul li:nth-child(1) {
+  font-size: 1em;
+}
+.container nav ul li:nth-child(2) {
+  font-size: 2em;
+}
+.container nav a {
+  text-decoration: none;
+}
+
+.transform {
+  width: 400px;
+  height: 500px;
+  background-color: yellow;
+  -ms-transform: rotate(20deg) scale(1.5);
+  /* IE 9 */
+  -webkit-transform: rotate(20deg) scale(1.5);
+  /* Safari 3-8 */
+  transform: rotate(20deg) scale(1.5);
+  font-size: 3em;
+}
+
+.transform-2 {
+  width: 200px;
+  height: 300px;
+  background-color: yellow;
+  -ms-transform: rotate(20deg) scale(1.5);
+  /* IE 9 */
+  -webkit-transform: rotate(20deg) scale(1.5);
+  /* Safari 3-8 */
+  transform: rotate(20deg) scale(1.5);
+}
+
+.border1, .border {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+  font-size: 1em;
+}
+
+.border1 {
+  margin: 20px;
+}
+
+.element a {
+  text-decoration: none;
+  color: black;
+}
+.element a:hover {
+  color: white;
+}
+
+.header {
+  /* addition */
+  font-size: 6px;
+  /* subtraction */
+  height: 75%;
+}
+
+/* multi */
+.multi {
+  width: 100%;
+  /* division */
+  height: 6px;
+}
+
+p:before {
+  content: "I am a string with quate";
+  font-family: cursiveserif;
+}
+
+/*# sourceMappingURL=style.css.map */
